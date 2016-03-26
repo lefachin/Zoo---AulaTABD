@@ -7,6 +7,8 @@ import java.time.LocalDate;
 
 import org.bson.types.ObjectId;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,6 +23,8 @@ public class Animal {
 
 	private ObjectId _id;
 	private Especie especie;
+	// teste para aparecer na tela.
+	private StringProperty nomePropety;
 	private String nome;
 	private String subspecieVulgar;
 	private String subspecieCientifica;
@@ -44,5 +48,15 @@ public class Animal {
 		this.coloracao = coloracao;
 		this.comprimentoTotal = comprimentoTotal;
 		this.ameacado = ameacado;
+	}
+	
+	// construtor so para o nome de cada animal para colocar na tabela
+	
+	public Animal(String nomePropety){
+		this.nomePropety= new SimpleStringProperty(nomePropety);
+	}
+	
+	public StringProperty nomePropety(){
+		return nomePropety;
 	}
 }
