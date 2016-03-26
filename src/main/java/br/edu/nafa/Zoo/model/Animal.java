@@ -29,9 +29,11 @@ public class Animal {
 	private Float peso;
 	private String coloracao;
 	private Float comprimentoTotal;
+	private Boolean ameacado;
 	
 	public Animal(Especie especie, String nome, String subspecieVulgar, String subspecieCientifica,
-			LocalDate dataNascimento, String genero, Float peso, String coloracao, Float comprimentoTotal) {
+			LocalDate dataNascimento, String genero, Float peso, String coloracao, Float comprimentoTotal,
+			Boolean ameacado) {
 		this.especie = especie;
 		this.nome = nome;
 		this.subspecieVulgar = subspecieVulgar;
@@ -41,5 +43,6 @@ public class Animal {
 		this.peso = peso;
 		this.coloracao = coloracao;
 		this.comprimentoTotal = comprimentoTotal;
+		this.ameacado = ameacado;
 	}
 }
